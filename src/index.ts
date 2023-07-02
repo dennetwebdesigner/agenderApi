@@ -1,3 +1,4 @@
+import "dotenv/config";
 import fastify from "fastify";
 
 import { routes } from "./routes";
@@ -6,6 +7,8 @@ const app = fastify();
 
 routes(app);
 
+const port = process.env.PORT as any;
+
 app
-  .listen({ port: 3000 })
+  .listen({ port })
   .then(() => console.log(`server runner http://localhost:3000`));

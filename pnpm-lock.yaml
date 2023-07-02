@@ -11,6 +11,14 @@ dependencies:
     specifier: ^5.1.6
     version: 5.1.6
 
+devDependencies:
+  '@types/node':
+    specifier: ^20.3.3
+    version: 20.3.3
+  dotenv:
+    specifier: ^16.3.1
+    version: 16.3.1
+
 packages:
 
   /@esbuild-kit/cjs-loader@2.4.2:
@@ -254,6 +262,10 @@ packages:
       fast-json-stringify: 5.7.0
     dev: false
 
+  /@types/node@20.3.3:
+    resolution: {integrity: sha512-wheIYdr4NYML61AjC8MKj/2jrR/kDQri/CIpVoZwldwhnIrD/j9jIU5bJ8yBKuB2VhpFV7Ab6G2XkBjv9r9Zzw==}
+    dev: true
+
   /abort-controller@3.0.0:
     resolution: {integrity: sha512-h8lQ8tacZYnR3vNQTgibj+tODHI5/+l06Au2Pcriv/Gmet0eaj4TwWH41sO9wnHDiQsEj19q0drzdWdeAHtweg==}
     engines: {node: '>=6.5'}
@@ -335,6 +347,11 @@ packages:
     dependencies:
       ms: 2.1.2
     dev: false
+
+  /dotenv@16.3.1:
+    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+    engines: {node: '>=12'}
+    dev: true
 
   /esbuild@0.17.19:
     resolution: {integrity: sha512-XQ0jAPFkK/u3LcVRcvVHQcTIqD6E2H1fvZMA5dQPSOWb3suUbWbfbRf94pjc0bNzRYLfIrDRQXr7X+LHIm5oHw==}
