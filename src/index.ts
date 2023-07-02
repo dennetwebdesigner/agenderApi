@@ -9,6 +9,4 @@ routes(app);
 
 const port = process.env.PORT as any;
 
-app
-  .listen({ port })
-  .then(() => console.log(`server runner http://localhost:3000`));
+app.listen({ port }).then(() => console.log(`server runner port ${port}`));
