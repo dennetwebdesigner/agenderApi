@@ -1,14 +1,14 @@
 import "dotenv/config";
 import fastify from "fastify";
+import http from "http";
 
 import { routes } from "./routes";
 
 const app = fastify();
+const server = http.createServer(app as any);
 
 routes(app);
 
 const port = process.env.PORT as any;
 
-app
-  .listen({ port, host: "0.0.0.0" })
-  .then(() => console.log(`server runner port ${port}`));
+server.listen(port, () => console.log("server runner in " + port));
