@@ -1,8 +1,9 @@
-import { FastifyInstance } from "fastify";
+import { Request, Response, Router } from "express";
 
-export function routes(app: FastifyInstance) {
-  app.get("/", (req, res) => res.status(200).send({ api: "online" }));
-  app.get("/*", (req, res) =>
-    res.status(400).send({ error: "Esta pagina não existe!" })
-  );
-}
+const router = Router();
+
+router.get("/", (req: Request, res: Response) => {
+  return res.json({ api: "online" });
+});
+
+export default router;

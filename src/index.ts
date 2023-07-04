@@ -1,14 +1,15 @@
 import "dotenv/config";
-import fastify from "fastify";
+import express from "express";
 import http from "http";
 
-import { routes } from "./routes";
+import routes from "./routes";
 
-const app = fastify();
+const app = express();
 const server = http.createServer(app as any);
 
-routes(app);
+const port = (process.env.PORT as any) || 3000;
+const host = "0.0.0.0";
 
-const port = process.env.PORT as any;
+app.use(routes);
 
-server.listen(port, "0.0.0.0", () => console.log("server runner in " + port));
+server.listen(port, host, () => console.log("server runner in " + port));
