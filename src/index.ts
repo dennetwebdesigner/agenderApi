@@ -11,4 +11,4 @@ routes(app);
 
 const port = process.env.PORT as any;
 
-server.listen(port, () => console.log("server runner in " + port));
+server.listen(port, "0.0.0.0", () => console.log("server runner in " + port));
